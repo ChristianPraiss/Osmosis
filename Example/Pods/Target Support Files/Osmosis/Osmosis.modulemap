@@ -1,0 +1,6 @@
+framework module Osmosis {
+  umbrella header "Osmosis-umbrella.h"
+
+  export *
+  module * { export * }
+}

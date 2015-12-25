@@ -1,0 +1,20 @@
+PODS:
+  - Nimble (3.0.0)
+  - Osmosis (0.1.0)
+  - Quick (0.8.0)
+
+DEPENDENCIES:
+  - Nimble (= 3.0.0)
+  - Osmosis (from `../`)
+  - Quick (~> 0.8.0)
+
+EXTERNAL SOURCES:
+  Osmosis:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
+  Osmosis: 269a1bed16def3dc315a53053c9b4ad83089e91f
+  Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
+
+COCOAPODS: 0.39.0

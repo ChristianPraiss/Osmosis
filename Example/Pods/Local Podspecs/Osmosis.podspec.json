@@ -1,0 +1,25 @@
+{
+  "name": "Osmosis",
+  "version": "0.1.0",
+  "summary": "A short description of Osmosis.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/Osmosis",
+  "license": "MIT",
+  "authors": {
+    "Christian Praiß": "christian_praiss@icloud.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/Osmosis.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "Osmosis": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

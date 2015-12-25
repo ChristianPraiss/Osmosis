@@ -7,7 +7,6 @@ end
 
 target 'Osmosis_Tests', :exclusive => true do
   pod "Osmosis", :path => "../"
-
   pod 'Quick', '~> 0.8.0'
   pod 'Nimble', '3.0.0'
 end

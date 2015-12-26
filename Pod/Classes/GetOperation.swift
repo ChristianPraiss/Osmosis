@@ -9,26 +9,29 @@
 import Foundation
 import Kanna
 
-class GetOperation: OsmosisOperation {
+internal class GetOperation: OsmosisOperation {
     
     let url: NSURL
+    var next: OsmosisOperation?
+    var errorHandler: OsmosisErrorCallback?
     
-    init(url: NSURL){
+    init(url: NSURL, errorHandler: OsmosisErrorCallback? = nil){
         self.url = url
+        self.errorHandler = errorHandler
     }
     
-    func execute(doc: HTMLDocument, node: XMLElement?, callback: OperationCallback) {
+    func execute(doc: HTMLDocument?, node: XMLElement?, dict: [String: AnyObject]) {
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         let task = session.dataTaskWithURL(url) { (data, response, error) -> Void in
             guard let error = error else {
-                if let data = data, let string = String(data: data, encoding: NSUTF8StringEncoding), let doc = HTML(html: string, encoding: NSUTF8StringEncoding) {
-                    callback(doc: doc, node: doc.body, dict: nil, error: nil)
+                if let data = data, let string = String(data: data, encoding: NSUTF8StringEncoding), let newdoc = HTML(html: string, encoding: NSUTF8StringEncoding) {
+                    self.next?.execute(newdoc, node: newdoc.body, dict: dict)
                 }else{
-                    callback(doc: nil, node: nil, dict: nil, error: NSError(domain: "HTML parse error", code: 500, userInfo: nil))
+                    self.errorHandler?(error: NSError(domain: "HTML parse error", code: 500, userInfo: nil))
                 }
                 return
             }
-            callback(doc: nil, node: nil, dict: nil, error: error)
+            self.errorHandler?(error: error)
         }
         
         task.resume()

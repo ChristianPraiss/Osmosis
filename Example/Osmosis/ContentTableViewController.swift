@@ -7,27 +7,54 @@
 //
 
 import UIKit
+import Osmosis
 
 class ContentTableViewController: UITableViewController {
-
+    
+    var array: [[String: AnyObject]] = [[String: AnyObject]]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        Osmosis(errorHandler: { (error) -> Void in
+            print(error)
+        })
+            .get(NSURL(string: "http://www.onlinecontest.org/olc-2.0/gliding/daily.html?st=olc&rt=olc&df=2015-12-22&sp=2016&c=C0&sc=#p:0;")!)
+            .find(OsmosisSelector(selector: "#dailyScore tr.valid"), type: .CSS)
+            .populate([
+                OsmosisPopulateKey.Single("dsId") : OsmosisSelector(selector: "td:nth-child(13) a", attribute: "href"),
+                OsmosisPopulateKey.Single("points") : OsmosisSelector(selector: "td:nth-child(2)")
+                
+                ], type: .CSS)
+            .list { (dict) -> Void in
+                self.array.append(dict)
+            }
+            .start()
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return array.count
     }
-
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("contentCell", forIndexPath: indexPath)
+        let content = array[indexPath.row]
+        var text = ""
+        for (key, value) in content {
+            text = "\(key): \(value)"
+        }
+        cell.textLabel?.text = text
+        return cell
+    }
+    
 }

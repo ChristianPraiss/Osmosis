@@ -11,35 +11,34 @@ import Kanna
 
 internal class FindOperation: OsmosisOperation {
     
-    var query: String
+    var query: OsmosisSelector
     var type: HTMLSelectorType
     var next: OsmosisOperation?
-    var errorHandler: OsmosisErrorCallback
+    var errorHandler: OsmosisErrorCallback?
     
-    init(query: String, type: HTMLSelectorType, errorHandler: OsmosisErrorCallback){
+    init(query: OsmosisSelector, type: HTMLSelectorType, errorHandler: OsmosisErrorCallback? = nil){
         self.query = query
         self.type = type
         self.errorHandler = errorHandler
     }
     
-    func execute(doc: HTMLDocument?, node: XMLElement?, dict: [String: String]?) {
+    func execute(doc: HTMLDocument?, node: XMLElement?, dict: [String: AnyObject]) {
         switch type {
         case .CSS:
-            if let nodes = doc?.css(query) where nodes.count != 0 {
+            if let nodes = node?.css(query.selector) where nodes.count != 0 {
                     for node in nodes {
-                        next?.execute(doc, node: node, dict: nil)
+                        next?.execute(doc, node: node, dict: dict)
                     }
             } else {
-                errorHandler(error: NSError(domain: "No node found for \(self.query)", code: 500, userInfo: nil))
+                self.errorHandler?(error: NSError(domain: "No node found for \(self.query)", code: 500, userInfo: nil))
             }
         case .XPath:
-            let nodes = doc.xpath(query)
-            if nodes.count != 0 {
+            if let nodes = node?.xpath(query.selector) where nodes.count != 0 {
                 for node in nodes {
-                    callback(doc: doc, node: node, dict: nil, error: nil)
+                    next?.execute(doc, node: node, dict: dict)
                 }
-            }else{
-                callback(doc: doc, node: node, dict: nil, error: NSError(domain: "No node found for \(self.query)", code: 500, userInfo: nil))
+            } else {
+                self.errorHandler?(error: NSError(domain: "No node found for \(self.query)", code: 500, userInfo: nil))
             }
         }
     }

@@ -25,6 +25,9 @@
 		2F9066CC1C2D7DCF00F2F467 /* FindOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9066CA1C2D7DB900F2F467 /* FindOperation.swift */; };
 		2F9066CE1C2D7DDF00F2F467 /* FollowOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9066CD1C2D7DDF00F2F467 /* FollowOperation.swift */; };
 		2F9066D01C2D9B5600F2F467 /* GetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9066CF1C2D9B5600F2F467 /* GetOperation.swift */; };
+		2F9066D21C2E95FF00F2F467 /* PopulateOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9066D11C2E95FF00F2F467 /* PopulateOperation.swift */; };
+		2F9066D41C2E980E00F2F467 /* OsmosisParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9066D31C2E980E00F2F467 /* OsmosisParser.swift */; };
+		2F9066D61C2E9CF200F2F467 /* ListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9066D51C2E9CF200F2F467 /* ListOperation.swift */; };
 		30223196F59D333DC88E6D05F9F1E4D7 /* QuickConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDF12BCF8DECCC2925F05CD41156216 /* QuickConfiguration.m */; };
 		33264C6A7A3536AD91EF42B3E8CC8220 /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582F87405A142699268E548BE882E43C /* BeGreaterThanOrEqualTo.swift */; };
 		33514FEE6EA65605EFB6F1801834B692 /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7B13C66E66666E511969CB985F2892 /* AssertionDispatcher.swift */; };
@@ -191,6 +194,9 @@
 		2F9066CA1C2D7DB900F2F467 /* FindOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindOperation.swift; sourceTree = "<group>"; };
 		2F9066CD1C2D7DDF00F2F467 /* FollowOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowOperation.swift; sourceTree = "<group>"; };
 		2F9066CF1C2D9B5600F2F467 /* GetOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetOperation.swift; sourceTree = "<group>"; };
+		2F9066D11C2E95FF00F2F467 /* PopulateOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopulateOperation.swift; sourceTree = "<group>"; };
+		2F9066D31C2E980E00F2F467 /* OsmosisParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OsmosisParser.swift; sourceTree = "<group>"; };
+		2F9066D51C2E9CF200F2F467 /* ListOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOperation.swift; sourceTree = "<group>"; };
 		30DD251142B677C1E2509792ADB49D20 /* Equal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Equal.swift; path = Nimble/Matchers/Equal.swift; sourceTree = "<group>"; };
 		31DE7511E1C6AA9DF66C3894946004CD /* Pods_Osmosis_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Osmosis_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		337E722E41973ED98D1AE30E16F9DE62 /* SourceLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceLocation.swift; path = Nimble/Utils/SourceLocation.swift; sourceTree = "<group>"; };
@@ -594,6 +600,9 @@
 				2F9066CA1C2D7DB900F2F467 /* FindOperation.swift */,
 				2F9066CD1C2D7DDF00F2F467 /* FollowOperation.swift */,
 				2F9066CF1C2D9B5600F2F467 /* GetOperation.swift */,
+				2F9066D11C2E95FF00F2F467 /* PopulateOperation.swift */,
+				2F9066D31C2E980E00F2F467 /* OsmosisParser.swift */,
+				2F9066D51C2E9CF200F2F467 /* ListOperation.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -933,9 +942,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F9066CC1C2D7DCF00F2F467 /* FindOperation.swift in Sources */,
+				2F9066D21C2E95FF00F2F467 /* PopulateOperation.swift in Sources */,
 				2F9066CE1C2D7DDF00F2F467 /* FollowOperation.swift in Sources */,
+				2F9066D61C2E9CF200F2F467 /* ListOperation.swift in Sources */,
 				980D5883278F1AA01DCE531F8460E58E /* Osmosis-dummy.m in Sources */,
 				B88E60456B53B0D279171AEE63B9DF4F /* Osmosis.swift in Sources */,
+				2F9066D41C2E980E00F2F467 /* OsmosisParser.swift in Sources */,
 				2F9066D01C2D9B5600F2F467 /* GetOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,36 +11,61 @@ import Kanna
 
 internal class FollowOperation: OsmosisOperation {
     
-    var query: String
+    var query: OsmosisSelector
     var type: HTMLSelectorType
-    
-    init(query: String, type: HTMLSelectorType){
+    var next: OsmosisOperation?
+    var errorHandler: OsmosisErrorCallback?
+
+    init(query: OsmosisSelector, type: HTMLSelectorType, errorHandler: OsmosisErrorCallback? = nil){
         self.query = query
         self.type = type
+        self.errorHandler = errorHandler
     }
     
-    func execute(doc: HTMLDocument, node: XMLElement?, callback: OperationCallback) {
+    func execute(doc: HTMLDocument?, node: XMLElement?, dict: [String: AnyObject]) {
         switch type {
         case .CSS:
-            let nodes = doc.css(query)
-            if let node = nodes.first {
+            let nodes = node?.css(query.selector)
+            if let node = nodes?.first {
                 if let href = node["href"], let url = NSURL(string: href) {
-                    _ = GetOperation(url: url).execute(doc, node: node) { (newdoc, node, dict, error) -> Void in
-                        callback(doc: newdoc, node: node, dict: dict, error: error)
+                    let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+                    let task = session.dataTaskWithURL(url) { (data, response, error) -> Void in
+                        guard let error = error else {
+                            if let data = data, let string = String(data: data, encoding: NSUTF8StringEncoding), let newdoc = HTML(html: string, encoding: NSUTF8StringEncoding) {
+                                self.next?.execute(newdoc, node: newdoc.body, dict: dict)
+                            }else{
+                                self.errorHandler?(error: NSError(domain: "HTML parse error", code: 500, userInfo: nil))
+                            }
+                            return
+                        }
+                        self.errorHandler?(error: error)
                     }
+                    
+                    task.resume()
                 }else{
-                    callback(doc: nil, node: nil, dict: nil, error: NSError(domain: "No node found for follow \(self.query)", code: 500, userInfo: nil))
+                    self.errorHandler?(error: NSError(domain: "No node found for follow \(self.query)", code: 500, userInfo: nil))
                 }
             }
         case .XPath:
-            let nodes = doc.xpath(query)
-            if let node = nodes.first {
+            let nodes = node?.xpath(query.selector)
+            if let node = nodes?.first {
                 if let href = node["href"], let url = NSURL(string: href) {
-                    _ = GetOperation(url: url).execute(doc, node: node) { (newdoc, node, dict, error) -> Void in
-                        callback(doc: newdoc, node: node, dict: dict, error: error)
+                    let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+                    let task = session.dataTaskWithURL(url) { (data, response, error) -> Void in
+                        guard let error = error else {
+                            if let data = data, let string = String(data: data, encoding: NSUTF8StringEncoding), let newdoc = HTML(html: string, encoding: NSUTF8StringEncoding) {
+                                self.next?.execute(newdoc, node: newdoc.body, dict: dict)
+                            }else{
+                                self.errorHandler?(error: NSError(domain: "HTML parse error", code: 500, userInfo: nil))
+                            }
+                            return
+                        }
+                        self.errorHandler?(error: error)
                     }
+                    
+                    task.resume()
                 }else{
-                    callback(doc: nil, node: nil, dict: nil, error: NSError(domain: "No node found for follow \(self.query)", code: 500, userInfo: nil))
+                    self.errorHandler?(error: NSError(domain: "No node found for follow \(self.query)", code: 500, userInfo: nil))
                 }
             }
         }

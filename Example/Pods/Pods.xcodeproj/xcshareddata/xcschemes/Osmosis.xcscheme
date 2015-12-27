@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '59E1485C350A94EF2B0D25A7'
+               BlueprintIdentifier = '6FA9401ADD4918F038D097BB'
                BlueprintName = 'Osmosis'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Osmosis.framework'>

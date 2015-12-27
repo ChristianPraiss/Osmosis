@@ -1,26 +1,12 @@
-#
-# Be sure to run `pod lib lint Osmosis.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = "Osmosis"
   s.version          = "0.1.0"
-  s.summary          = "A short description of Osmosis."
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description      = <<-DESC
-                       DESC
+  s.summary          = "Osmosis - Web scraping for Swift"
+  s.description      = "Osmosis was built to make scraping websites using Swift easy. With Osmosis you can daisy
+                        chain commands to retrieve a websites data in a convenient manner and build apps around
+                        existing websites"
 
   s.homepage         = "https://github.com/ChristianPraiss/Osmosis"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Christian Praiß" => "christian_praiss@icloud.com" }
   s.source           = { :git => "https://github.com/ChristianPraiss/Osmosis.git", :tag => s.version.to_s }
@@ -33,9 +19,6 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
     'Osmosis' => ['Pod/Assets/*.png']
   }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Kanna', '~> 1.0.0'
+  s.dependency 'Kanna', '~> 1.0.3'
 
 end

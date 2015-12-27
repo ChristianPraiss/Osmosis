@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Osmosis"
-  s.version          = "0.1.0"
+  s.version          = "1.0.0"
   s.summary          = "Osmosis - Web scraping for Swift"
   s.description      = "Osmosis was built to make scraping websites using Swift easy. With Osmosis you can daisy
                         chain commands to retrieve a websites data in a convenient manner and build apps around

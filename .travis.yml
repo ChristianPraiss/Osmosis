@@ -8,4 +8,4 @@ xcode_scheme: Osmosis-Example
 podfile: Example/Podfile
 
 script:
-  - xcodebuild [DEFAULT_OPTIONS] CODE_SIGNING_REQUIRED=NO
+  - xcodebuild test -workspace Osmosis-Example.xcworkspace -scheme Osmosis-Example CODE_SIGNING_REQUIRED=NO

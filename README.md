@@ -8,21 +8,30 @@
 
 ## Description
 
-Break the silence of your UI, whispering, shouting or whistling at it. **Whisper** is a component that will make the task of display messages and in-app notifications simple. It has three different views inside.
-
-#### Whispers
-
-![Whisper](https://github.com/hyperoslo/Whisper/blob/master/Resources/permanent-whisper.png)
-
-Display a short message at the bottom of the navigation bar, this can be anything, from a "Great Job!" to an error message. It can have images or even a loader.
-
-#### Shouts
+Osmosis makes web scraping using Swift easy. With Osmosis you can quickly parse and transform any website to use its data in your app. It is based on the **node.js** module `node-osmosis`
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+```swift
+	Osmosis()
+	// Get the website at the given url
+                .get(url)
+    // Find all elements matching the selector and execute the following actions on them 
+                .find(OsmosisSelector(selector: "#dailyScore tr.valid"), type: .CSS)
+   	// Populate the information you want from the dict
+                .populate([
+                    OsmosisPopulateKey.Single("points") : OsmosisSelector(selector: "td:nth-child(2)"),
+                    OsmosisPopulateKey.Single("aircraft"): OsmosisSelector(selector: "#tt_aircraft b"),
+                    OsmosisPopulateKey.Single("takeOffLocation"): OsmosisSelector(selector: ".hlinfo > b:last-child"),                                   OsmosisPopulateKey.Single("pilot"): OsmosisSelector(selector: ".hltitel a")], type: .CSS)
+    // Get the parsed information
+                .list { (var dict) -> Void in
+                    // Use the parsed dict here
+                    print(dict)
+                    }
+    // Start the operations
+                .start()
+```
 
-## Requirements
 
 ## Installation
 

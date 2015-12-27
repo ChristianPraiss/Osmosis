@@ -6,3 +6,6 @@ language: objective-c
 xcode_workspace: Example/Osmosis.xcworkspace # path to your xcodeproj folder
 xcode_scheme: Osmosis-Example
 podfile: Example/Podfile
+
+script:
+  - xcodebuild [DEFAULT_OPTIONS] CODE_SIGNING_REQUIRED=NO

@@ -23,7 +23,7 @@ Osmosis makes web scraping using Swift easy. With Osmosis you can quickly parse 
                     OsmosisPopulateKey.Single("points") : OsmosisSelector(selector: "td:nth-child(2)"),
                     OsmosisPopulateKey.Single("aircraft"): OsmosisSelector(selector: "#tt_aircraft b"),
                     OsmosisPopulateKey.Single("takeOffLocation"): OsmosisSelector(selector: ".hlinfo > b:last-child"),
-										OsmosisPopulateKey.Single("pilot"): OsmosisSelector(selector: ".hltitel a")]
+                    OsmosisPopulateKey.Single("pilot"): OsmosisSelector(selector: ".hltitel a")]
 										, type: .CSS)
     // Get the parsed information
                 .list { (var dict) -> Void in
@@ -33,6 +33,8 @@ Osmosis makes web scraping using Swift easy. With Osmosis you can quickly parse 
     // Start the operations
                 .start()
 ```
+
+Osmosis supports both **XPath** and **CSS** selectors.
 
 
 ## Installation

@@ -22,7 +22,7 @@ internal class PopulateOperation: OsmosisOperation {
         self.errorHandler = errorHandler
     }
     
-    func execute(doc: HTMLDocument?, node: XMLElement?, dict: [String: AnyObject]) {
+    func execute(doc: HTMLDocument?, currentURL: NSURL?, node: XMLElement?, dict: [String: AnyObject]) {
         var newDict = dict
         for (key, query) in queries {
             var nodes: XMLNodeSet?
@@ -61,6 +61,6 @@ internal class PopulateOperation: OsmosisOperation {
             }
         }
         
-        self.next?.execute(doc, node: node, dict: newDict)
+        self.next?.execute(doc, currentURL: currentURL, node: node, dict: newDict)
     }
 }

@@ -43,6 +43,14 @@ public enum OsmosisPopulateKey: Hashable, Equatable {
     }
 }
 
+internal class FinishOperation: OsmosisOperation {
+    var next: OsmosisOperation?
+    
+    func execute(doc: HTMLDocument?, currentURL: NSURL?, node: XMLElement?, dict: [String : AnyObject]) {
+        print("done")
+    }
+}
+
 public func == (lhs: OsmosisPopulateKey, rhs: OsmosisPopulateKey) -> Bool {
     return lhs.hashValue == rhs.hashValue
 }
@@ -126,17 +134,21 @@ public class Osmosis {
     
     public func load(html: NSData, encoding: NSStringEncoding)->Osmosis {
         
-        // TODO: Convert HTML
+        let new = LoadOperation(data: html, encoding: encoding, errorHandler: errorHandler)
+        if var operation = operations.last {
+            operation.next = new
+        }
+        operations.append(new)
         
         return self
     }
     
     public func start(){
-        operations.first?.execute(nil, node: nil, dict: [String: AnyObject]())
+        operations.first?.execute(nil, currentURL: nil, node: nil, dict: [String: AnyObject]())
     }
 }
 
 internal protocol OsmosisOperation {
     var next: OsmosisOperation? { get set }
-    func execute(doc: HTMLDocument?, node: XMLElement?, dict: [String: AnyObject])
+    func execute(doc: HTMLDocument?, currentURL: NSURL?, node: XMLElement?, dict: [String: AnyObject])
 }

@@ -18,9 +18,9 @@ internal class ListOperation: OsmosisOperation {
         self.callback = callback
     }
     
-    func execute(doc: HTMLDocument?, node: XMLElement?, dict: [String : AnyObject]) {
+    func execute(doc: HTMLDocument?, currentURL: NSURL?, node: XMLElement?, dict: [String : AnyObject]) {
         callback(dict: dict)
         
-        next?.execute(doc, node: node, dict: dict)
+        next?.execute(doc, currentURL: currentURL, node: node, dict: dict)
     }
 }

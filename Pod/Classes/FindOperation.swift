@@ -22,12 +22,12 @@ internal class FindOperation: OsmosisOperation {
         self.errorHandler = errorHandler
     }
     
-    func execute(doc: HTMLDocument?, node: XMLElement?, dict: [String: AnyObject]) {
+    func execute(doc: HTMLDocument?, currentURL: NSURL?, node: XMLElement?, dict: [String: AnyObject]) {
         switch type {
         case .CSS:
             if let nodes = node?.css(query.selector) where nodes.count != 0 {
                     for node in nodes {
-                        next?.execute(doc, node: node, dict: dict)
+                        next?.execute(doc, currentURL: currentURL, node: node, dict: dict)
                     }
             } else {
                 self.errorHandler?(error: NSError(domain: "No node found for \(self.query)", code: 500, userInfo: nil))
@@ -35,7 +35,7 @@ internal class FindOperation: OsmosisOperation {
         case .XPath:
             if let nodes = node?.xpath(query.selector) where nodes.count != 0 {
                 for node in nodes {
-                    next?.execute(doc, node: node, dict: dict)
+                    next?.execute(doc, currentURL: currentURL, node: node, dict: dict)
                 }
             } else {
                 self.errorHandler?(error: NSError(domain: "No node found for \(self.query)", code: 500, userInfo: nil))

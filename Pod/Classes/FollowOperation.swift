@@ -22,17 +22,17 @@ internal class FollowOperation: OsmosisOperation {
         self.errorHandler = errorHandler
     }
     
-    func execute(doc: HTMLDocument?, node: XMLElement?, dict: [String: AnyObject]) {
+    func execute(doc: HTMLDocument?, currentURL: NSURL?, node: XMLElement?, dict: [String: AnyObject]) {
         switch type {
         case .CSS:
             let nodes = node?.css(query.selector)
             if let node = nodes?.first {
-                if let href = node["href"], let url = NSURL(string: href) {
+                if let href = node["href"], let url = currentURL?.absoluteURL, let newURL = NSURL(string: href, relativeToURL: url) {
                     let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
-                    let task = session.dataTaskWithURL(url) { (data, response, error) -> Void in
+                    let task = session.dataTaskWithURL(newURL.absoluteURL) { (data, response, error) -> Void in
                         guard let error = error else {
                             if let data = data, let string = String(data: data, encoding: NSUTF8StringEncoding), let newdoc = HTML(html: string, encoding: NSUTF8StringEncoding) {
-                                self.next?.execute(newdoc, node: newdoc.body, dict: dict)
+                                self.next?.execute(newdoc, currentURL: newURL, node: newdoc.body, dict: dict)
                             }else{
                                 self.errorHandler?(error: NSError(domain: "HTML parse error", code: 500, userInfo: nil))
                             }
@@ -49,12 +49,12 @@ internal class FollowOperation: OsmosisOperation {
         case .XPath:
             let nodes = node?.xpath(query.selector)
             if let node = nodes?.first {
-                if let href = node["href"], let url = NSURL(string: href) {
+                if let href = node["href"], let url = currentURL, let newURL = url.URLByDeletingLastPathComponent?.URLByAppendingPathComponent(href) {
                     let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
-                    let task = session.dataTaskWithURL(url) { (data, response, error) -> Void in
+                    let task = session.dataTaskWithURL(newURL) { (data, response, error) -> Void in
                         guard let error = error else {
                             if let data = data, let string = String(data: data, encoding: NSUTF8StringEncoding), let newdoc = HTML(html: string, encoding: NSUTF8StringEncoding) {
-                                self.next?.execute(newdoc, node: newdoc.body, dict: dict)
+                                self.next?.execute(newdoc, currentURL: newURL, node: newdoc.body, dict: dict)
                             }else{
                                 self.errorHandler?(error: NSError(domain: "HTML parse error", code: 500, userInfo: nil))
                             }

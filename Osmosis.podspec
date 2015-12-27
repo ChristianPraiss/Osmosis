@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
     'Osmosis' => ['Pod/Assets/*.png']
   }
-  s.dependency 'Kanna', '~> 1.0.0'
+  s.dependency 'Kanna', '1.0.4'
 
 end

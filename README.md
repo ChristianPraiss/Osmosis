@@ -1,4 +1,4 @@
-# Osmosis
+# Osmosis - Swift Scrapping
 
 [![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CI Status](http://img.shields.io/travis/ChristianPraiss/Osmosis.svg?style=flat)](https://travis-ci.org/ChristianPraiss/Osmosis)
@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/cocoapods/l/Osmosis.svg?style=flat)](http://cocoapods.org/pods/Osmosis)
 [![Platform](https://img.shields.io/cocoapods/p/Osmosis.svg?style=flat)](http://cocoapods.org/pods/Osmosis)
 
-## Description :leaves:
+## Description
 
 Break the silence of your UI, whispering, shouting or whistling at it. **Whisper** is a component that will make the task of display messages and in-app notifications simple. It has three different views inside.
 

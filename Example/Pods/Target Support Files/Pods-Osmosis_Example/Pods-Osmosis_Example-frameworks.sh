@@ -84,10 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Osmosis_Example/Async.framework"
   install_framework "Pods-Osmosis_Example/Kanna.framework"
   install_framework "Pods-Osmosis_Example/Osmosis.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Osmosis_Example/Async.framework"
   install_framework "Pods-Osmosis_Example/Kanna.framework"
   install_framework "Pods-Osmosis_Example/Osmosis.framework"
 fi

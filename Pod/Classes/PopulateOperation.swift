@@ -44,7 +44,7 @@ internal class PopulateOperation: OsmosisOperation {
                         }
                     }else{
                         let populateError = NSError(domain: "No node found for populate \(query)", code: 500, userInfo: nil)
-                        self.errorHandler?(error: populateError)
+                        self.errorHandler?(populateError)
                     }
                 case .Array(let key):
                     var contentArray = [String]()
@@ -59,7 +59,7 @@ internal class PopulateOperation: OsmosisOperation {
                 }
             }else{
                 let populateError = NSError(domain: "No node found for populate \(query)", code: 500, userInfo: nil)
-                self.errorHandler?(error: populateError)
+                self.errorHandler?(populateError)
             }
         }
         

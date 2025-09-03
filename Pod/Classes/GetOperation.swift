@@ -24,7 +24,7 @@ internal class GetOperation: OsmosisOperation {
         let session = URLSession(configuration: URLSessionConfiguration.default)
         let task = session.dataTask(with: url) { (data, response, error) -> Void in
             if let error = error {
-                self.errorHandler?(error: error)
+                self.errorHandler?(error)
                 return
             }
             
@@ -32,7 +32,7 @@ internal class GetOperation: OsmosisOperation {
                   let string = String(data: data, encoding: .utf8), 
                   let newdoc = HTML(html: string, encoding: .utf8) else {
                 let parseError = NSError(domain: "HTML parse error", code: 500, userInfo: nil)
-                self.errorHandler?(error: parseError)
+                self.errorHandler?(parseError)
                 return
             }
             
@@ -61,7 +61,7 @@ internal class LoadOperation: OsmosisOperation {
             self.next?.execute(doc: html, currentURL: nil, node: html.body, dict: dict)
         }else{
             let parseError = NSError(domain: "HTML parse error", code: 500, userInfo: nil)
-            self.errorHandler?(error: parseError)
+            self.errorHandler?(parseError)
         }
     }
 }

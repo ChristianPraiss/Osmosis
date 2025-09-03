@@ -32,6 +32,17 @@ public struct OsmosisSelector {
 public enum OsmosisPopulateKey: Hashable, Equatable {
     case Array(String)
     case Single(String)
+    
+    public func hash(into hasher: inout Hasher) {
+        switch self {
+        case .Array(let arg):
+            hasher.combine(0)
+            hasher.combine(arg)
+        case .Single(let arg):
+            hasher.combine(1)
+            hasher.combine(arg)
+        }
+    }
 }
 
 internal class FinishOperation: OsmosisOperation {

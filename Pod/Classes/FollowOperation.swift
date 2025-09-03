@@ -31,7 +31,7 @@ internal class FollowOperation: OsmosisOperation {
                     let session = URLSession(configuration: URLSessionConfiguration.default)
                     let task = session.dataTask(with: newURL.absoluteURL) { (data, response, error) -> Void in
                         if let error = error {
-                            self.errorHandler?(error: error)
+                            self.errorHandler?(error)
                             return
                         }
                         
@@ -39,7 +39,7 @@ internal class FollowOperation: OsmosisOperation {
                               let string = String(data: data, encoding: .utf8), 
                               let newdoc = HTML(html: string, encoding: .utf8) else {
                             let parseError = NSError(domain: "HTML parse error", code: 500, userInfo: nil)
-                            self.errorHandler?(error: parseError)
+                            self.errorHandler?(parseError)
                             return
                         }
                         
@@ -49,7 +49,7 @@ internal class FollowOperation: OsmosisOperation {
                     task.resume()
                 }else{
                     let followError = NSError(domain: "No node found for follow \(self.query)", code: 500, userInfo: nil)
-                    self.errorHandler?(error: followError)
+                    self.errorHandler?(followError)
                 }
             }
         case .XPath:
@@ -59,7 +59,7 @@ internal class FollowOperation: OsmosisOperation {
                     let session = URLSession(configuration: URLSessionConfiguration.default)
                     let task = session.dataTask(with: newURL) { (data, response, error) -> Void in
                         if let error = error {
-                            self.errorHandler?(error: error)
+                            self.errorHandler?(error)
                             return
                         }
                         
@@ -67,7 +67,7 @@ internal class FollowOperation: OsmosisOperation {
                               let string = String(data: data, encoding: .utf8), 
                               let newdoc = HTML(html: string, encoding: .utf8) else {
                             let parseError = NSError(domain: "HTML parse error", code: 500, userInfo: nil)
-                            self.errorHandler?(error: parseError)
+                            self.errorHandler?(parseError)
                             return
                         }
                         
@@ -77,7 +77,7 @@ internal class FollowOperation: OsmosisOperation {
                     task.resume()
                 }else{
                     let followError = NSError(domain: "No node found for follow \(self.query)", code: 500, userInfo: nil)
-                    self.errorHandler?(error: followError)
+                    self.errorHandler?(followError)
                 }
             }
         }

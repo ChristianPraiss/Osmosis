@@ -31,7 +31,7 @@ internal class FindOperation: OsmosisOperation {
                     }
             } else {
                 let findError = NSError(domain: "No node found for \(self.query)", code: 500, userInfo: nil)
-                self.errorHandler?(error: findError)
+                self.errorHandler?(findError)
             }
         case .XPath:
             if let nodes = node?.xpath(query.selector), nodes.count != 0 {
@@ -40,7 +40,7 @@ internal class FindOperation: OsmosisOperation {
                 }
             } else {
                 let findError = NSError(domain: "No node found for \(self.query)", code: 500, userInfo: nil)
-                self.errorHandler?(error: findError)
+                self.errorHandler?(findError)
             }
         }
     }

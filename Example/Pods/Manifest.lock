@@ -2,15 +2,22 @@ PODS:
   - AsyncSwift (1.6.4)
   - Kanna (1.0.3)
   - Nimble (3.0.0)
-  - Osmosis (1.0.0):
+  - Osmosis (1.0.1):
     - Kanna (~> 1.0.0)
   - Quick (0.8.0)
 
 DEPENDENCIES:
   - AsyncSwift
-  - Nimble (= 3.0.0)
+  - Nimble
   - Osmosis (from `../`)
-  - Quick (~> 0.8.0)
+  - Quick
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AsyncSwift
+    - Kanna
+    - Nimble
+    - Quick
 
 EXTERNAL SOURCES:
   Osmosis:
@@ -20,7 +27,9 @@ SPEC CHECKSUMS:
   AsyncSwift: 3c90beed237324f1b57e1f1c414dc5501985d208
   Kanna: 10c7f20762846e808ec5716e4191427bd71bf1c2
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
-  Osmosis: 09712c0b78aedf7569fb3bd5052ad8dced88446f
+  Osmosis: 64d59a9a43fe309a8704b6b95723d3f88c202173
   Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: a98aaefed6167e2b5c442f72a3e1c0bd51f4622f
+
+COCOAPODS: 1.16.2

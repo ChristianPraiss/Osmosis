@@ -22,50 +22,62 @@ internal class FollowOperation: OsmosisOperation {
         self.errorHandler = errorHandler
     }
     
-    func execute(doc: HTMLDocument?, currentURL: NSURL?, node: XMLElement?, dict: [String: AnyObject]) {
+    func execute(doc: HTMLDocument?, currentURL: URL?, node: XMLElement?, dict: [String: Any]) {
         switch type {
         case .CSS:
             let nodes = node?.css(query.selector)
             if let node = nodes?.first {
-                if let href = node["href"], let url = currentURL?.absoluteURL, let newURL = NSURL(string: href, relativeToURL: url) {
-                    let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
-                    let task = session.dataTaskWithURL(newURL.absoluteURL) { (data, response, error) -> Void in
-                        guard let error = error else {
-                            if let data = data, let string = String(data: data, encoding: NSUTF8StringEncoding), let newdoc = HTML(html: string, encoding: NSUTF8StringEncoding) {
-                                self.next?.execute(newdoc, currentURL: newURL, node: newdoc.body, dict: dict)
-                            }else{
-                                self.errorHandler?(error: NSError(domain: "HTML parse error", code: 500, userInfo: nil))
-                            }
+                if let href = node["href"], let url = currentURL, let newURL = URL(string: href, relativeTo: url) {
+                    let session = URLSession(configuration: URLSessionConfiguration.default)
+                    let task = session.dataTask(with: newURL.absoluteURL) { (data, response, error) -> Void in
+                        if let error = error {
+                            self.errorHandler?(error: error)
                             return
                         }
-                        self.errorHandler?(error: error)
+                        
+                        guard let data = data, 
+                              let string = String(data: data, encoding: .utf8), 
+                              let newdoc = HTML(html: string, encoding: .utf8) else {
+                            let parseError = NSError(domain: "HTML parse error", code: 500, userInfo: nil)
+                            self.errorHandler?(error: parseError)
+                            return
+                        }
+                        
+                        self.next?.execute(doc: newdoc, currentURL: newURL, node: newdoc.body, dict: dict)
                     }
                     
                     task.resume()
                 }else{
-                    self.errorHandler?(error: NSError(domain: "No node found for follow \(self.query)", code: 500, userInfo: nil))
+                    let followError = NSError(domain: "No node found for follow \(self.query)", code: 500, userInfo: nil)
+                    self.errorHandler?(error: followError)
                 }
             }
         case .XPath:
             let nodes = node?.xpath(query.selector)
             if let node = nodes?.first {
-                if let href = node["href"], let url = currentURL, let newURL = url.URLByDeletingLastPathComponent?.URLByAppendingPathComponent(href) {
-                    let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
-                    let task = session.dataTaskWithURL(newURL) { (data, response, error) -> Void in
-                        guard let error = error else {
-                            if let data = data, let string = String(data: data, encoding: NSUTF8StringEncoding), let newdoc = HTML(html: string, encoding: NSUTF8StringEncoding) {
-                                self.next?.execute(newdoc, currentURL: newURL, node: newdoc.body, dict: dict)
-                            }else{
-                                self.errorHandler?(error: NSError(domain: "HTML parse error", code: 500, userInfo: nil))
-                            }
+                if let href = node["href"], let url = currentURL, let newURL = url.deletingLastPathComponent().appendingPathComponent(href) {
+                    let session = URLSession(configuration: URLSessionConfiguration.default)
+                    let task = session.dataTask(with: newURL) { (data, response, error) -> Void in
+                        if let error = error {
+                            self.errorHandler?(error: error)
                             return
                         }
-                        self.errorHandler?(error: error)
+                        
+                        guard let data = data, 
+                              let string = String(data: data, encoding: .utf8), 
+                              let newdoc = HTML(html: string, encoding: .utf8) else {
+                            let parseError = NSError(domain: "HTML parse error", code: 500, userInfo: nil)
+                            self.errorHandler?(error: parseError)
+                            return
+                        }
+                        
+                        self.next?.execute(doc: newdoc, currentURL: newURL, node: newdoc.body, dict: dict)
                     }
                     
                     task.resume()
                 }else{
-                    self.errorHandler?(error: NSError(domain: "No node found for follow \(self.query)", code: 500, userInfo: nil))
+                    let followError = NSError(domain: "No node found for follow \(self.query)", code: 500, userInfo: nil)
+                    self.errorHandler?(error: followError)
                 }
             }
         }

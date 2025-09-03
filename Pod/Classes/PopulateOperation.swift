@@ -22,7 +22,7 @@ internal class PopulateOperation: OsmosisOperation {
         self.errorHandler = errorHandler
     }
     
-    func execute(doc: HTMLDocument?, currentURL: NSURL?, node: XMLElement?, dict: [String: AnyObject]) {
+    func execute(doc: HTMLDocument?, currentURL: URL?, node: XMLElement?, dict: [String: Any]) {
         var newDict = dict
         for (key, query) in queries {
             var nodes: XMLNodeSet?
@@ -33,7 +33,7 @@ internal class PopulateOperation: OsmosisOperation {
                 nodes = node?.xpath(query.selector)
             }
             
-            if let nodes = nodes where nodes.count != 0 {
+            if let nodes = nodes, nodes.count != 0 {
                 switch key {
                 case .Single(let key):
                     if let node = nodes.first {
@@ -43,7 +43,8 @@ internal class PopulateOperation: OsmosisOperation {
                             newDict[key] = node.text
                         }
                     }else{
-                        self.errorHandler?(error: NSError(domain: "No node found for populate \(query)", code: 500, userInfo: nil))
+                        let populateError = NSError(domain: "No node found for populate \(query)", code: 500, userInfo: nil)
+                        self.errorHandler?(error: populateError)
                     }
                 case .Array(let key):
                     var contentArray = [String]()
@@ -57,10 +58,11 @@ internal class PopulateOperation: OsmosisOperation {
                     newDict[key] = contentArray
                 }
             }else{
-                self.errorHandler?(error: NSError(domain: "No node found for populate \(query)", code: 500, userInfo: nil))
+                let populateError = NSError(domain: "No node found for populate \(query)", code: 500, userInfo: nil)
+                self.errorHandler?(error: populateError)
             }
         }
         
-        self.next?.execute(doc, currentURL: currentURL, node: node, dict: newDict)
+        self.next?.execute(doc: doc, currentURL: currentURL, node: node, dict: newDict)
     }
 }

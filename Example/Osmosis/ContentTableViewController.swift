@@ -12,7 +12,7 @@ import Async
 
 class ContentTableViewController: UITableViewController {
     
-    var array: [[String: AnyObject]] = [[String: AnyObject]]() {
+    var array: [[String: Any]] = [[String: Any]]() {
         didSet {
             Async.main {
                 self.tableView.reloadData()
@@ -24,10 +24,10 @@ class ContentTableViewController: UITableViewController {
         super.viewDidLoad()
         
         Async.background {
-            Osmosis(errorHandler: { (error) -> Void in
+            Osmosis(errorHandler: { error in
                 print(error)
             })
-                .get(NSURL(string: "http://www.onlinecontest.org/olc-2.0/gliding/daily.html?st=olc&rt=olc&df=2015-12-22&sp=2016&c=C0&sc=#p:0;")!)
+                .get(URL(string: "http://www.onlinecontest.org/olc-2.0/gliding/daily.html?st=olc&rt=olc&df=2015-12-22&sp=2016&c=C0&sc=#p:0;")!)
                 .find(OsmosisSelector(selector: "#dailyScore tr.valid"), type: .CSS)
                 .populate([
                     OsmosisPopulateKey.Single("points") : OsmosisSelector(selector: "td:nth-child(2)"),
@@ -37,7 +37,7 @@ class ContentTableViewController: UITableViewController {
                 .populate([
                     OsmosisPopulateKey.Single("aircraft"): OsmosisSelector(selector: "#tt_aircraft b")
                     ], type: .CSS)
-                .list { (dict) -> Void in
+                .list { dict in
                     self.array.append(dict)
                 }
                 .start()
@@ -46,16 +46,16 @@ class ContentTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return array.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("contentCell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "contentCell", for: indexPath)
         let content = array[indexPath.row]
         var text = ""
         for (key, value) in content {
@@ -66,12 +66,12 @@ class ContentTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
     
-    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
     
 }

@@ -22,23 +22,25 @@ internal class FindOperation: OsmosisOperation {
         self.errorHandler = errorHandler
     }
     
-    func execute(doc: HTMLDocument?, currentURL: NSURL?, node: XMLElement?, dict: [String: AnyObject]) {
+    func execute(doc: HTMLDocument?, currentURL: URL?, node: XMLElement?, dict: [String: Any]) {
         switch type {
         case .CSS:
-            if let nodes = node?.css(query.selector) where nodes.count != 0 {
+            if let nodes = node?.css(query.selector), nodes.count != 0 {
                     for node in nodes {
-                        next?.execute(doc, currentURL: currentURL, node: node, dict: dict)
+                        next?.execute(doc: doc, currentURL: currentURL, node: node, dict: dict)
                     }
             } else {
-                self.errorHandler?(error: NSError(domain: "No node found for \(self.query)", code: 500, userInfo: nil))
+                let findError = NSError(domain: "No node found for \(self.query)", code: 500, userInfo: nil)
+                self.errorHandler?(error: findError)
             }
         case .XPath:
-            if let nodes = node?.xpath(query.selector) where nodes.count != 0 {
+            if let nodes = node?.xpath(query.selector), nodes.count != 0 {
                 for node in nodes {
-                    next?.execute(doc, currentURL: currentURL, node: node, dict: dict)
+                    next?.execute(doc: doc, currentURL: currentURL, node: node, dict: dict)
                 }
             } else {
-                self.errorHandler?(error: NSError(domain: "No node found for \(self.query)", code: 500, userInfo: nil))
+                let findError = NSError(domain: "No node found for \(self.query)", code: 500, userInfo: nil)
+                self.errorHandler?(error: findError)
             }
         }
     }

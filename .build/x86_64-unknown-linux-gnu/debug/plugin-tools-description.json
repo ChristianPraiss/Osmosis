@@ -1,0 +1,1072 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.xctest",
+      "packagePath" : "/home/runner/work/Osmosis/Osmosis",
+      "productName" : "OsmosisPackageTests"
+    }
+  ],
+  "copyCommands" : {
+    "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna_Kanna.resources/PrivacyInfo.xcprivacy" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/PrivacyInfo.xcprivacy"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna_Kanna.resources/PrivacyInfo.xcprivacy"
+        }
+      ]
+    }
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+    "OsmosisPackageDiscoveredTests"
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.Kanna-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/sources",
+      "importPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/CSS.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/Deprecated.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/Kanna.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/libxmlHTMLDocument.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/libxmlHTMLNode.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/libxmlParserOption.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/DerivedSources/resource_bundle_accessor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<Kanna-x86_64-unknown-linux-gnu-debug.module-resources>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "Kanna",
+      "moduleOutputPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules/Kanna.swiftmodule",
+      "objects" : [
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/CSS.swift.o",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/Deprecated.swift.o",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/Kanna.swift.o",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/libxmlHTMLDocument.swift.o",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/libxmlHTMLNode.swift.o",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/libxmlParserOption.swift.o",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/resource_bundle_accessor.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-Xcc",
+        "-fmodule-map-file=/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Modules/module.modulemap",
+        "-I/usr/include/libxml2",
+        "-module-cache-path",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-suppress-warnings",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/CSS.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/Deprecated.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/Kanna.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/libxmlHTMLDocument.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/libxmlHTMLNode.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/libxmlParserOption.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/resource_bundle_accessor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules/Kanna.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/CSS.swift",
+        "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/Deprecated.swift",
+        "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/Kanna.swift",
+        "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/libxmlHTMLDocument.swift",
+        "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/libxmlHTMLNode.swift",
+        "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/libxmlParserOption.swift",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/DerivedSources/resource_bundle_accessor.swift"
+      ],
+      "tempsPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.Osmosis-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/sources",
+      "importPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/Pod/Classes/FindOperation.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/Pod/Classes/FollowOperation.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/Pod/Classes/GetOperation.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/Pod/Classes/ListOperation.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/Pod/Classes/Osmosis.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/Pod/Classes/OsmosisParser.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/Pod/Classes/PopulateOperation.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules/Kanna.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "Osmosis",
+      "moduleOutputPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules/Osmosis.swiftmodule",
+      "objects" : [
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/FindOperation.swift.o",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/FollowOperation.swift.o",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/GetOperation.swift.o",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/ListOperation.swift.o",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/Osmosis.swift.o",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/OsmosisParser.swift.o",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/PopulateOperation.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-Xcc",
+        "-fmodule-map-file=/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Modules/module.modulemap",
+        "-I/usr/include/libxml2",
+        "-module-cache-path",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/FindOperation.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/FollowOperation.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/GetOperation.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/ListOperation.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/Osmosis.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/OsmosisParser.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/PopulateOperation.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules/Osmosis.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/Osmosis/Osmosis/Pod/Classes/FindOperation.swift",
+        "/home/runner/work/Osmosis/Osmosis/Pod/Classes/FollowOperation.swift",
+        "/home/runner/work/Osmosis/Osmosis/Pod/Classes/GetOperation.swift",
+        "/home/runner/work/Osmosis/Osmosis/Pod/Classes/ListOperation.swift",
+        "/home/runner/work/Osmosis/Osmosis/Pod/Classes/Osmosis.swift",
+        "/home/runner/work/Osmosis/Osmosis/Pod/Classes/OsmosisParser.swift",
+        "/home/runner/work/Osmosis/Osmosis/Pod/Classes/PopulateOperation.swift"
+      ],
+      "tempsPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.OsmosisPackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.build/sources",
+      "importPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.derived/OsmosisTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.derived/all-discovered-tests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules/OsmosisTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "OsmosisPackageDiscoveredTests",
+      "moduleOutputPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules/OsmosisPackageDiscoveredTests.swiftmodule",
+      "objects" : [
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.build/OsmosisTests.swift.o",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.build/all-discovered-tests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-Xcc",
+        "-fmodule-map-file=/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Modules/module.modulemap",
+        "-I/usr/include/libxml2",
+        "-module-cache-path",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.build/OsmosisTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.build/all-discovered-tests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules/OsmosisPackageDiscoveredTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.derived/OsmosisTests.swift",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.derived/all-discovered-tests.swift"
+      ],
+      "tempsPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.OsmosisPackageTests-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.build/sources",
+      "importPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules/OsmosisTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules/OsmosisPackageDiscoveredTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "OsmosisPackageTests",
+      "moduleOutputPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules/OsmosisPackageTests.swiftmodule",
+      "objects" : [
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-Xcc",
+        "-fmodule-map-file=/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Modules/module.modulemap",
+        "-I/usr/include/libxml2",
+        "-module-cache-path",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules/OsmosisPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.OsmosisTests-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisTests.build/sources",
+      "importPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/Tests/Tests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules/Osmosis.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "OsmosisTests",
+      "moduleOutputPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules/OsmosisTests.swiftmodule",
+      "objects" : [
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisTests.build/Tests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-Xcc",
+        "-fmodule-map-file=/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Modules/module.modulemap",
+        "-I/usr/include/libxml2",
+        "-module-cache-path",
+        "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisTests.build/Tests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules/OsmosisTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/Osmosis/Osmosis/Tests/Tests.swift"
+      ],
+      "tempsPath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "Kanna" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "Kanna",
+      "-incremental",
+      "-c",
+      "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/CSS.swift",
+      "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/Deprecated.swift",
+      "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/Kanna.swift",
+      "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/libxmlHTMLDocument.swift",
+      "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/libxmlHTMLNode.swift",
+      "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/libxmlParserOption.swift",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/DerivedSources/resource_bundle_accessor.swift",
+      "-I",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-Xcc",
+      "-fmodule-map-file=/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Modules/module.modulemap",
+      "-I/usr/include/libxml2",
+      "-module-cache-path",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-suppress-warnings",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ],
+    "Osmosis" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "Osmosis",
+      "-incremental",
+      "-c",
+      "/home/runner/work/Osmosis/Osmosis/Pod/Classes/FindOperation.swift",
+      "/home/runner/work/Osmosis/Osmosis/Pod/Classes/FollowOperation.swift",
+      "/home/runner/work/Osmosis/Osmosis/Pod/Classes/GetOperation.swift",
+      "/home/runner/work/Osmosis/Osmosis/Pod/Classes/ListOperation.swift",
+      "/home/runner/work/Osmosis/Osmosis/Pod/Classes/Osmosis.swift",
+      "/home/runner/work/Osmosis/Osmosis/Pod/Classes/OsmosisParser.swift",
+      "/home/runner/work/Osmosis/Osmosis/Pod/Classes/PopulateOperation.swift",
+      "-I",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-Xcc",
+      "-fmodule-map-file=/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Modules/module.modulemap",
+      "-I/usr/include/libxml2",
+      "-module-cache-path",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ],
+    "OsmosisPackageDiscoveredTests" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "OsmosisPackageDiscoveredTests",
+      "-incremental",
+      "-c",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.derived/OsmosisTests.swift",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.derived/all-discovered-tests.swift",
+      "-I",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-Xcc",
+      "-fmodule-map-file=/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Modules/module.modulemap",
+      "-I/usr/include/libxml2",
+      "-module-cache-path",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ],
+    "OsmosisPackageTests" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "OsmosisPackageTests",
+      "-incremental",
+      "-c",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.derived/runner.swift",
+      "-I",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-Xcc",
+      "-fmodule-map-file=/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Modules/module.modulemap",
+      "-I/usr/include/libxml2",
+      "-module-cache-path",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ],
+    "OsmosisTests" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "OsmosisTests",
+      "-incremental",
+      "-c",
+      "/home/runner/work/Osmosis/Osmosis/Tests/Tests.swift",
+      "-I",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-Xcc",
+      "-fmodule-map-file=/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Modules/module.modulemap",
+      "-I/usr/include/libxml2",
+      "-module-cache-path",
+      "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "Kanna" : [
+      "libxml2"
+    ],
+    "Osmosis" : [
+      "Kanna",
+      "libxml2"
+    ],
+    "OsmosisPackageDiscoveredTests" : [
+      "OsmosisTests",
+      "Osmosis",
+      "Kanna",
+      "libxml2"
+    ],
+    "OsmosisPackageTests" : [
+      "OsmosisPackageDiscoveredTests",
+      "OsmosisTests",
+      "Osmosis",
+      "Kanna",
+      "libxml2"
+    ],
+    "OsmosisTests" : [
+      "Osmosis",
+      "Kanna",
+      "libxml2"
+    ]
+  },
+  "testDiscoveryCommands" : {
+    "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.derived/all-discovered-tests.swift" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisTests.build/Tests.swift.o"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.derived/OsmosisTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.derived/all-discovered-tests.swift"
+        }
+      ]
+    }
+  },
+  "testEntryPointCommands" : {
+    "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.derived/runner.swift" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Modules/OsmosisPackageDiscoveredTests.swiftmodule"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "enableAllTraits" : false
+  },
+  "writeCommands" : {
+    "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/CSS.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/Deprecated.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/Kanna.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/libxmlHTMLDocument.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/libxmlHTMLNode.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/checkouts/Kanna/Sources/Kanna/libxmlParserOption.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/DerivedSources/resource_bundle_accessor.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/sources"
+    },
+    "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/Pod/Classes/FindOperation.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/Pod/Classes/FollowOperation.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/Pod/Classes/GetOperation.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/Pod/Classes/ListOperation.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/Pod/Classes/Osmosis.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/Pod/Classes/OsmosisParser.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/Pod/Classes/PopulateOperation.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/sources"
+    },
+    "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.derived/OsmosisTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.derived/all-discovered-tests.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.build/sources"
+    },
+    "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.build/sources"
+    },
+    "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/CSS.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/Deprecated.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/Kanna.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/Kanna.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/libxmlHTMLDocument.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/libxmlHTMLNode.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/libxmlParserOption.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Kanna.build/resource_bundle_accessor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/FindOperation.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/FollowOperation.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/GetOperation.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/ListOperation.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/Osmosis.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/Osmosis.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/OsmosisParser.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/Osmosis.build/PopulateOperation.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.build/OsmosisPackageDiscoveredTests.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.build/OsmosisTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageDiscoveredTests.build/all-discovered-tests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.build/OsmosisPackageTests.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisTests.build/OsmosisTests.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisTests.build/Tests.swift.o"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisPackageTests.product/Objects.LinkFileList"
+    },
+    "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/Osmosis/Osmosis/Tests/Tests.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/OsmosisTests.build/sources"
+    },
+    "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/usr/share/swift/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/Osmosis/Osmosis/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+    }
+  }
+}

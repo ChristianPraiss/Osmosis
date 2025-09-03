@@ -1,7 +1,7 @@
 # Osmosis - Swift Scrapping
 
 [![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![CI Status](http://img.shields.io/travis/ChristianPraiss/Osmosis.svg?style=flat)](https://travis-ci.org/ChristianPraiss/Osmosis)
+[![CI Status](https://github.com/ChristianPraiss/Osmosis/workflows/Test/badge.svg)](https://github.com/ChristianPraiss/Osmosis/actions/workflows/test.yml)
 [![Version](https://img.shields.io/cocoapods/v/Osmosis.svg?style=flat)](http://cocoapods.org/pods/Osmosis)
 [![License](https://img.shields.io/cocoapods/l/Osmosis.svg?style=flat)](http://cocoapods.org/pods/Osmosis)
 [![Platform](https://img.shields.io/cocoapods/p/Osmosis.svg?style=flat)](http://cocoapods.org/pods/Osmosis)

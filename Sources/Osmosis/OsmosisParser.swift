@@ -1,6 +1,6 @@
 //
 //  OsmosisParser.swift
-//  Pods
+//  Osmosis
 //
 //  Created by Christian Praiß on 12/26/15.
 //

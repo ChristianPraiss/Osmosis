@@ -1,6 +1,6 @@
 //
-//  PopulateOperation.swift
-//  Pods
+//  FollowOperation.swift
+//  Osmosis
 //
 //  Created by Christian Praiß on 12/25/15.
 //

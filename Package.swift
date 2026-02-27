@@ -19,8 +19,7 @@ let package = Package(
     targets: [
         .target(
             name: "Osmosis",
-            dependencies: ["Kanna"],
-            path: "Pod/Classes"
+            dependencies: ["Kanna"]
         ),
         .testTarget(
             name: "OsmosisTests",

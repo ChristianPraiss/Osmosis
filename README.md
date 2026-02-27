@@ -1,10 +1,9 @@
-# Osmosis - Swift Scrapping
+# Osmosis - Swift Scraping
 
-[![Carthage](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![CI Status](http://img.shields.io/travis/ChristianPraiss/Osmosis.svg?style=flat)](https://travis-ci.org/ChristianPraiss/Osmosis)
-[![Version](https://img.shields.io/cocoapods/v/Osmosis.svg?style=flat)](http://cocoapods.org/pods/Osmosis)
-[![License](https://img.shields.io/cocoapods/l/Osmosis.svg?style=flat)](http://cocoapods.org/pods/Osmosis)
-[![Platform](https://img.shields.io/cocoapods/p/Osmosis.svg?style=flat)](http://cocoapods.org/pods/Osmosis)
+[![CI Status](https://github.com/ChristianPraiss/Osmosis/workflows/Test/badge.svg)](https://github.com/ChristianPraiss/Osmosis/actions/workflows/test.yml)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Swift](https://img.shields.io/badge/Swift-6-orange.svg)](https://swift.org)
+[![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20macOS-lightgrey.svg)](https://github.com/ChristianPraiss/Osmosis)
 
 ## Description
 
@@ -13,25 +12,24 @@ Osmosis makes web scraping using Swift easy. With Osmosis you can quickly parse 
 ## Usage
 
 ```swift
-	Osmosis()
-	// Get the website at the given url
-                .get(url)
-    // Find all elements matching the selector and execute the following actions on them
-                .find(OsmosisSelector(selector: "#dailyScore tr.valid"), type: .CSS)
-   	// Populate the information you want from the dict
-                .populate([
-                    OsmosisPopulateKey.Single("points") : OsmosisSelector(selector: "td:nth-child(2)"),
-                    OsmosisPopulateKey.Single("aircraft"): OsmosisSelector(selector: "#tt_aircraft b"),
-                    OsmosisPopulateKey.Single("takeOffLocation"): OsmosisSelector(selector: ".hlinfo > b:last-child"),
-                    OsmosisPopulateKey.Single("pilot"): OsmosisSelector(selector: ".hltitel a")]
-										, type: .CSS)
-    // Get the parsed information
-                .list { (var dict) -> Void in
-                    // Use the parsed dict here
-                    print(dict)
-                    }
-    // Start the operations
-                .start()
+Osmosis(errorHandler: { error in
+    print(error)
+})
+// Get the FAQ page
+.get(URL(string: "https://sw.kovidgoyal.net/kitty/faq/")!)
+// Find each FAQ section
+.find(string: OsmosisSelector(selector: "#frequently-asked-questions > section"), type: .CSS)
+// Populate the section title and first paragraph of the answer
+.populate(dict: [
+    OsmosisPopulateKey.Single("title"): OsmosisSelector(selector: "h2"),
+    OsmosisPopulateKey.Single("answer"): OsmosisSelector(selector: "p")
+], type: .CSS)
+// Process each FAQ entry
+.list { dict in
+    print(dict)
+}
+// Start the operations
+.start()
 ```
 
 Osmosis supports both **XPath** and **CSS** selectors.
@@ -39,11 +37,19 @@ Osmosis supports both **XPath** and **CSS** selectors.
 
 ## Installation
 
-Osmosis is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### Swift Package Manager
 
-```ruby
-pod "Osmosis"
+Add Osmosis to your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/ChristianPraiss/Osmosis.git", from: "1.0.1"),
+]
+```
+
+Or add it in Xcode via **File → Add Package Dependencies** and enter:
+```
+https://github.com/ChristianPraiss/Osmosis.git
 ```
 
 ## Author
@@ -53,3 +59,4 @@ Christian Praiß, christian_praiss@icloud.com
 ## License
 
 Osmosis is available under the MIT license. See the LICENSE file for more info.
+

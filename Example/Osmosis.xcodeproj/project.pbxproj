@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F3EB8C91C2FF87600167015 /* Pods_Osmosis_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F3EB8C81C2FF87600167015 /* Pods_Osmosis_Example.framework */; };
 		2F6103271CA3304C006EEE4D /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2F6103261CA3304C006EEE4D /* .travis.yml */; };
 		2F9B83181C2D60F200F8FB2B /* ContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B83171C2D60F200F8FB2B /* ContentTableViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		80AEB42CD427EC74167C2A9F /* Pods_Osmosis_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B318204863390A21DA4C93AD /* Pods_Osmosis_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11327A58BB281BFF340A74A4 /* Pods-Osmosis Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Osmosis Example.release.xcconfig"; path = "Target Support Files/Pods-Osmosis Example/Pods-Osmosis Example.release.xcconfig"; sourceTree = "<group>"; };
 		2F3EB8C31C2FF84800167015 /* Async.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Async.framework; path = "Pods/../build/Debug-iphoneos/Async.framework"; sourceTree = "<group>"; };
-		2F3EB8C81C2FF87600167015 /* Pods_Osmosis_Example.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Osmosis_Example.framework; path = "Pods/../build/Debug-iphoneos/Pods_Osmosis_Example.framework"; sourceTree = "<group>"; };
 		2F6103261CA3304C006EEE4D /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		2F61032E1CA3307D006EEE4D /* Osmosis_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Osmosis_Tests.swift; sourceTree = "<group>"; };
 		2F6103301CA3307D006EEE4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F9873826589783FC5E430B7 /* Osmosis.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Osmosis.podspec; path = ../Osmosis.podspec; sourceTree = "<group>"; };
 		2F9B83171C2D60F200F8FB2B /* ContentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentTableViewController.swift; sourceTree = "<group>"; };
-		5CAE1CC5C923FE456314C8C1 /* Pods_Osmosis_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Osmosis_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3155709278D5250E6919F548 /* Pods-Osmosis Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Osmosis Example.debug.xcconfig"; path = "Target Support Files/Pods-Osmosis Example/Pods-Osmosis Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Osmosis Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Osmosis Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,12 +34,8 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6F98747694F51DBF6BCF0A3D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		72385D3EAD2926EFF08F2DDF /* Pods-Osmosis_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Osmosis_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Osmosis_Tests/Pods-Osmosis_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		8E541B38A487A15EAD269725 /* Pods-Osmosis_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Osmosis_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Osmosis_Example/Pods-Osmosis_Example.release.xcconfig"; sourceTree = "<group>"; };
-		9DB66C87C7C0117EDE6B2A3C /* Pods_Osmosis_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Osmosis_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D76B8F4B8F24AA05D7904B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		A1E5B65172630849D3CBE2A5 /* Pods-Osmosis_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Osmosis_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Osmosis_Example/Pods-Osmosis_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		DC5FE9B93329EAD78D89265C /* Pods-Osmosis_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Osmosis_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Osmosis_Tests/Pods-Osmosis_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B318204863390A21DA4C93AD /* Pods_Osmosis_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Osmosis_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F3EB8C91C2FF87600167015 /* Pods_Osmosis_Example.framework in Frameworks */,
+				80AEB42CD427EC74167C2A9F /* Pods_Osmosis_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,15 +59,14 @@
 			path = "Osmosis Tests";
 			sourceTree = "<group>";
 		};
-		43BD736A9A7C137D5B222B19 /* Pods */ = {
+		38EFF79271979DDFE3F91A55 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A1E5B65172630849D3CBE2A5 /* Pods-Osmosis_Example.debug.xcconfig */,
-				8E541B38A487A15EAD269725 /* Pods-Osmosis_Example.release.xcconfig */,
-				DC5FE9B93329EAD78D89265C /* Pods-Osmosis_Tests.debug.xcconfig */,
-				72385D3EAD2926EFF08F2DDF /* Pods-Osmosis_Tests.release.xcconfig */,
+				3155709278D5250E6919F548 /* Pods-Osmosis Example.debug.xcconfig */,
+				11327A58BB281BFF340A74A4 /* Pods-Osmosis Example.release.xcconfig */,
 			);
 			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -82,8 +77,8 @@
 				607FACE81AFB9204008FA782 /* Tests */,
 				2F61032D1CA3307D006EEE4D /* Osmosis Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				43BD736A9A7C137D5B222B19 /* Pods */,
 				B8E60EFC336C19C36BC81564 /* Frameworks */,
+				38EFF79271979DDFE3F91A55 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,10 +143,8 @@
 		B8E60EFC336C19C36BC81564 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2F3EB8C81C2FF87600167015 /* Pods_Osmosis_Example.framework */,
 				2F3EB8C31C2FF84800167015 /* Async.framework */,
-				5CAE1CC5C923FE456314C8C1 /* Pods_Osmosis_Example.framework */,
-				9DB66C87C7C0117EDE6B2A3C /* Pods_Osmosis_Tests.framework */,
+				B318204863390A21DA4C93AD /* Pods_Osmosis_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,12 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Osmosis Example" */;
 			buildPhases = (
-				E5FCF595569FD106F19CC904 /* Check Pods Manifest.lock */,
+				80203D52544D614CF910AC06 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				5CE46A71D388ED7E6AA9F8CF /* Embed Pods Frameworks */,
-				0F0A6A58DEAD5A9F2A314F13 /* Copy Pods Resources */,
+				FFEA32554941EC3A257703BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,49 +219,52 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0F0A6A58DEAD5A9F2A314F13 /* Copy Pods Resources */ = {
+		80203D52544D614CF910AC06 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Osmosis Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Osmosis_Example/Pods-Osmosis_Example-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5CE46A71D388ED7E6AA9F8CF /* Embed Pods Frameworks */ = {
+		FFEA32554941EC3A257703BD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Osmosis Example/Pods-Osmosis Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AsyncSwift/Async.framework",
+				"${BUILT_PRODUCTS_DIR}/Kanna/Kanna.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Osmosis/Osmosis.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Async.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kanna.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Osmosis.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Osmosis_Example/Pods-Osmosis_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E5FCF595569FD106F19CC904 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Osmosis Example/Pods-Osmosis Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -390,7 +385,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1E5B65172630849D3CBE2A5 /* Pods-Osmosis_Example.debug.xcconfig */;
+			baseConfigurationReference = 3155709278D5250E6919F548 /* Pods-Osmosis Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -402,12 +397,13 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E541B38A487A15EAD269725 /* Pods-Osmosis_Example.release.xcconfig */;
+			baseConfigurationReference = 11327A58BB281BFF340A74A4 /* Pods-Osmosis Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -419,6 +415,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};

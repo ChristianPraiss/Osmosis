@@ -23,7 +23,7 @@ internal class GetOperation: OsmosisOperation {
         self.errorHandler = errorHandler
     }
     
-    func execute(doc: HTMLDocument?, currentURL: URL?, node: XMLElement?, dict: [String: Any]) {
+    func execute(doc: Kanna.HTMLDocument?, currentURL: URL?, node: Kanna.XMLElement?, dict: [String: Any]) {
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) -> Void in
             if let error = error {
                 self.errorHandler?(error)
@@ -58,7 +58,7 @@ internal class LoadOperation: OsmosisOperation {
         self.errorHandler = errorHandler
     }
     
-    func execute(doc: HTMLDocument?, currentURL: URL?, node: XMLElement?, dict: [String: Any]) {
+    func execute(doc: Kanna.HTMLDocument?, currentURL: URL?, node: Kanna.XMLElement?, dict: [String: Any]) {
         if let html = try? HTML(html: data, encoding: .utf8) {
             self.next?.execute(doc: html, currentURL: nil, node: html.body, dict: dict)
         }else{

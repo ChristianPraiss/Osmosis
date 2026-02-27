@@ -25,7 +25,7 @@ internal class FollowOperation: OsmosisOperation {
         self.errorHandler = errorHandler
     }
     
-    func execute(doc: HTMLDocument?, currentURL: URL?, node: XMLElement?, dict: [String: Any]) {
+    func execute(doc: Kanna.HTMLDocument?, currentURL: URL?, node: Kanna.XMLElement?, dict: [String: Any]) {
         switch type {
         case .CSS:
             let nodes = node?.css(query.selector)

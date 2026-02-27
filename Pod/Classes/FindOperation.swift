@@ -22,7 +22,7 @@ internal class FindOperation: OsmosisOperation {
         self.errorHandler = errorHandler
     }
     
-    func execute(doc: HTMLDocument?, currentURL: URL?, node: XMLElement?, dict: [String: Any]) {
+    func execute(doc: Kanna.HTMLDocument?, currentURL: URL?, node: Kanna.XMLElement?, dict: [String: Any]) {
         switch type {
         case .CSS:
             if let nodes = node?.css(query.selector), nodes.count != 0 {

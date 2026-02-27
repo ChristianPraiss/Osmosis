@@ -14,7 +14,7 @@ public enum HTMLSelectorType {
     case XPath
 }
 
-typealias OperationCallback = (_ doc: HTMLDocument?, _ node: XMLElement?, _ dict: [String: Any]?, _ error: Error?)->Void
+typealias OperationCallback = (_ doc: Kanna.HTMLDocument?, _ node: Kanna.XMLElement?, _ dict: [String: Any]?, _ error: Error?)->Void
 public typealias OsmosisErrorCallback = (_ error: Error)->Void
 public typealias OsmosisInfoCallback = (_ info: String)->Void
 public typealias OsmosisListCallback = (_ dict: [String: Any])->Void
@@ -48,7 +48,7 @@ public enum OsmosisPopulateKey: Hashable, Equatable {
 internal class FinishOperation: OsmosisOperation {
     var next: OsmosisOperation?
     
-    func execute(doc: HTMLDocument?, currentURL: URL?, node: XMLElement?, dict: [String : Any]) {
+    func execute(doc: Kanna.HTMLDocument?, currentURL: URL?, node: Kanna.XMLElement?, dict: [String : Any]) {
         print("done")
     }
 }
@@ -159,5 +159,5 @@ public class Osmosis {
 
 internal protocol OsmosisOperation {
     var next: OsmosisOperation? { get set }
-    func execute(doc: HTMLDocument?, currentURL: URL?, node: XMLElement?, dict: [String: Any])
+    func execute(doc: Kanna.HTMLDocument?, currentURL: URL?, node: Kanna.XMLElement?, dict: [String: Any])
 }

@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     name: Test on iOS
-    runs-on: macos-latest
+    runs-on: macos-15
     
     steps:
     - name: Checkout code
@@ -18,7 +18,7 @@ jobs:
     - name: Setup Xcode
       uses: maxim-lobanov/setup-xcode@v1
       with:
-        xcode-version: '16.0'
+        xcode-version: '16'
         
     - name: Install dependencies
       run: |
@@ -47,7 +47,7 @@ jobs:
         xcodebuild build \
           -workspace Osmosis.xcworkspace \
           -scheme "$SCHEME" \
-          -destination 'platform=iOS Simulator,name=iPhone 15,OS=18.0' \
+          -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
           CODE_SIGNING_REQUIRED=NO
           
         # Try to run tests if there are any test targets
@@ -55,5 +55,5 @@ jobs:
         xcodebuild test \
           -workspace Osmosis.xcworkspace \
           -scheme "$SCHEME" \
-          -destination 'platform=iOS Simulator,name=iPhone 15,OS=18.0' \
+          -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
           CODE_SIGNING_REQUIRED=NO || echo "Tests may not be configured properly, but build succeeded"

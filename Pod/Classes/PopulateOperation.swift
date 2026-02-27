@@ -25,18 +25,18 @@ internal class PopulateOperation: OsmosisOperation {
     func execute(doc: HTMLDocument?, currentURL: URL?, node: XMLElement?, dict: [String: Any]) {
         var newDict = dict
         for (key, query) in queries {
-            var nodes: XMLNodeSet?
+            let result: XPathObject?
             switch type {
             case .CSS:
-                nodes = node?.css(query.selector)
+                result = node?.css(query.selector)
             case .XPath:
-                nodes = node?.xpath(query.selector)
+                result = node?.xpath(query.selector)
             }
             
-            if let nodes = nodes, nodes.count != 0 {
+            if let result = result, result.count != 0 {
                 switch key {
                 case .Single(let key):
-                    if let node = nodes.first {
+                    if let node = result.first {
                         if let selector = query.attribute {
                             newDict[key] = node[selector]
                         }else{
@@ -48,7 +48,7 @@ internal class PopulateOperation: OsmosisOperation {
                     }
                 case .Array(let key):
                     var contentArray = [String]()
-                    for node in nodes {
+                    for node in result {
                         if let selector = query.attribute {
                             contentArray.append(node[selector] ?? "")
                         }else{

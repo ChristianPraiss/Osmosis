@@ -129,7 +129,7 @@ public class Osmosis {
         return self
     }
     
-    public func list(callback: OsmosisListCallback)->Osmosis{
+    public func list(callback: @escaping OsmosisListCallback)->Osmosis{
         let new = ListOperation(callback: callback)
         if var operation = operations.last {
             operation.next = new

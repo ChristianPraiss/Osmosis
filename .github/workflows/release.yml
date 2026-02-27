@@ -5,37 +5,23 @@ on:
     types: [published]
 
 jobs:
-  publish:
-    name: Publish to CocoaPods
-    runs-on: macos-latest
-    
+  validate:
+    name: Validate Package
+    runs-on: macos-15
+    permissions:
+      contents: read
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
+
+    - name: Setup Xcode
+      uses: maxim-lobanov/setup-xcode@v1
       with:
-        ruby-version: '3.2'
-        bundler-cache: true
-        
-    - name: Install CocoaPods
-      run: gem install cocoapods
-      
-    - name: Update CocoaPods repo
-      run: pod repo update
-      
-    - name: Validate podspec
-      run: pod spec lint Osmosis.podspec --allow-warnings
-      
-    - name: Publish to CocoaPods trunk
-      env:
-        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
-      run: |
-        if [ -z "$COCOAPODS_TRUNK_TOKEN" ]; then
-          echo "Error: COCOAPODS_TRUNK_TOKEN secret is not set"
-          echo "Please add your CocoaPods trunk token to GitHub Secrets"
-          echo "You can get your token by running: pod trunk me"
-          exit 1
-        fi
-        pod trunk push Osmosis.podspec --allow-warnings
+        xcode-version: '16'
+
+    - name: Build
+      run: swift build -v
+
+    - name: Run tests
+      run: swift test -v

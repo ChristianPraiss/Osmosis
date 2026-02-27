@@ -7,6 +7,9 @@
 //
 
 import Foundation
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 import Kanna
 
 internal class GetOperation: OsmosisOperation {
@@ -21,16 +24,15 @@ internal class GetOperation: OsmosisOperation {
     }
     
     func execute(doc: HTMLDocument?, currentURL: URL?, node: XMLElement?, dict: [String: Any]) {
-        let session = URLSession(configuration: URLSessionConfiguration.default)
-        let task = session.dataTask(with: url) { (data, response, error) -> Void in
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) -> Void in
             if let error = error {
                 self.errorHandler?(error)
                 return
             }
             
-            guard let data = data, 
-                  let string = String(data: data, encoding: .utf8), 
-                  let newdoc = HTML(html: string, encoding: .utf8) else {
+            guard let data = data,
+                  let string = String(data: data, encoding: .utf8),
+                  let newdoc = try? HTML(html: string, encoding: .utf8) else {
                 let parseError = NSError(domain: "HTML parse error", code: 500, userInfo: nil)
                 self.errorHandler?(parseError)
                 return
@@ -57,7 +59,7 @@ internal class LoadOperation: OsmosisOperation {
     }
     
     func execute(doc: HTMLDocument?, currentURL: URL?, node: XMLElement?, dict: [String: Any]) {
-        if let html = HTML(html: data, encoding: .utf8) {
+        if let html = try? HTML(html: data, encoding: .utf8) {
             self.next?.execute(doc: html, currentURL: nil, node: html.body, dict: dict)
         }else{
             let parseError = NSError(domain: "HTML parse error", code: 500, userInfo: nil)

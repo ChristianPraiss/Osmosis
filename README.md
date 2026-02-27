@@ -15,17 +15,16 @@ Osmosis makes web scraping using Swift easy. With Osmosis you can quickly parse 
 Osmosis(errorHandler: { error in
     print(error)
 })
-// Get the website at the given url
-.get(URL(string: "https://example.com")!)
-// Find all elements matching the selector and execute the following actions on them
-.find(OsmosisSelector(selector: "#dailyScore tr.valid"), type: .CSS)
-// Populate the information you want from the dict
-.populate([
-    OsmosisPopulateKey.Single("points"): OsmosisSelector(selector: "td:nth-child(2)"),
-    OsmosisPopulateKey.Single("aircraft"): OsmosisSelector(selector: "#tt_aircraft b"),
-    OsmosisPopulateKey.Single("pilot"): OsmosisSelector(selector: ".hltitel a")
+// Get the FAQ page
+.get(URL(string: "https://sw.kovidgoyal.net/kitty/faq/")!)
+// Find each FAQ section
+.find(string: OsmosisSelector(selector: "#frequently-asked-questions > section"), type: .CSS)
+// Populate the section title and first paragraph of the answer
+.populate(dict: [
+    OsmosisPopulateKey.Single("title"): OsmosisSelector(selector: "h2"),
+    OsmosisPopulateKey.Single("answer"): OsmosisSelector(selector: "p")
 ], type: .CSS)
-// Get the parsed information
+// Process each FAQ entry
 .list { dict in
     print(dict)
 }

@@ -25,16 +25,12 @@ class ContentTableViewController: UITableViewController {
         Osmosis(errorHandler: { error in
             print(error)
         })
-            .get(URL(string: "http://www.onlinecontest.org/olc-2.0/gliding/daily.html?st=olc&rt=olc&df=2015-12-22&sp=2016&c=C0&sc=#p:0;")!)
-            .find(OsmosisSelector(selector: "#dailyScore tr.valid"), type: .CSS)
-            .populate([
-                OsmosisPopulateKey.Single("points") : OsmosisSelector(selector: "td:nth-child(2)"),
-                OsmosisPopulateKey.Single("name") : OsmosisSelector(selector: "td:nth-child(3) a")
-                ], type: .CSS)
-            .follow(OsmosisSelector(selector: "td:nth-child(13) a"))
-            .populate([
-                OsmosisPopulateKey.Single("aircraft"): OsmosisSelector(selector: "#tt_aircraft b")
-                ], type: .CSS)
+            .get(URL(string: "https://sw.kovidgoyal.net/kitty/faq/")!)
+            .find(string: OsmosisSelector(selector: "#frequently-asked-questions > section"), type: .CSS)
+            .populate(dict: [
+                OsmosisPopulateKey.Single("title") : OsmosisSelector(selector: "h2"),
+                OsmosisPopulateKey.Single("answer") : OsmosisSelector(selector: "p")
+            ], type: .CSS)
             .list { dict in
                 self.array.append(dict)
             }
